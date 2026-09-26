@@ -2,53 +2,113 @@
 <html lang="uk">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101214">
-<title>Будівельні матеріали — каталог</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MIRBUD — будівельні матеріали</title>
+<meta name="description" content="Каталог будівельних матеріалів MIRBUD. Консультація та замовлення за телефоном.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f2ed;--paper:#fff;--ink:#151817;--muted:#70736f;--line:#dedbd3;--accent:#d49b38;--accent2:#b87b1c;--dark:#171a19;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif}
+a{text-decoration:none;color:inherit}button{font:inherit}
+.top{background:#111514;color:#fff;font-size:12px;padding:9px 22px;text-align:center;letter-spacing:.04em}
+.header{position:sticky;top:0;z-index:20;background:rgba(244,242,237,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav{max-width:1440px;margin:auto;height:78px;padding:0 34px;display:flex;align-items:center;gap:34px}
+.logo img{width:35px;height:35px;object-fit:contain;border-radius:10px}.logo img:not([src]){display:none}.logo{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:23px}
+.logo-mark{width:35px;height:35px;border-radius:11px;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:14px}
+.navlinks{display:flex;gap:25px;font-size:13px;font-weight:700;color:#4e514d}.navlinks a:hover{color:var(--ink)}
+.phone{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800}.phone b{color:var(--accent2)}
+.menu{display:none;background:none;border:0;font-size:25px}
+.hero{max-width:1440px;margin:0 auto;padding:70px 34px 45px;display:grid;grid-template-columns:1.25fr .75fr;gap:28px}
+.hero-main{min-height:440px;background:var(--dark);border-radius:34px;padding:56px;position:relative;overflow:hidden;color:white}
+.hero-main:after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-120px;bottom:-230px}
+.kicker{color:#d7ad67;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,82px);line-height:.93;letter-spacing:-.065em;margin:18px 0 25px;max-width:850px}
+.hero p{color:#c7cbc7;max-width:610px;line-height:1.65;font-size:15px}
+.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.btn{border:0;border-radius:13px;padding:14px 18px;font-weight:800;cursor:pointer}.btn.gold{background:var(--accent);color:#171a19}.btn.light{background:#fff;color:#171a19}
+.hero-side{display:grid;gap:18px}.stat{background:#e5e0d6;border-radius:28px;padding:29px;min-height:210px;position:relative;overflow:hidden}.stat:nth-child(2){background:#d2d5ce}.stat strong{font-size:46px;letter-spacing:-.05em;display:block}.stat span{color:#5c605c;font-size:13px}.stat:after{content:"↗";position:absolute;right:25px;bottom:20px;font-size:48px;color:rgba(0,0,0,.14)}
+.section{max-width:1440px;margin:auto;padding:40px 34px 80px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:24px}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#8a6a37}.section h2{font-size:42px;letter-spacing:-.05em;margin:6px 0 0}.section-head p{color:var(--muted);font-size:13px;max-width:430px}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:24px;overflow:auto;padding-bottom:4px}.chip{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px;font-size:12px;font-weight:800;cursor:pointer}.chip.active{background:var(--dark);color:#fff;border-color:var(--dark)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid #e8e5de;border-radius:20px;overflow:hidden;transition:.2s;position:relative}.card:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(23,26,25,.08)}.pic{aspect-ratio:1.16;overflow:hidden;background:#eee}.pic img{width:100%;height:100%;display:block;object-fit:cover;transition:.35s}.card:hover .pic img{transform:scale(1.03)}.cardbody{padding:15px}.tag{font-size:10px;color:#8c6d39;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.name{font-size:15px;font-weight:800;margin:6px 0}.desc{font-size:11px;color:#777b76;min-height:32px;line-height:1.45}.cardbottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px}.price{font-weight:800;font-size:14px}.ask{border:0;background:#171a19;color:#fff;border-radius:10px;padding:9px 11px;font-size:11px;font-weight:800;cursor:pointer}
+.note{background:#e9e5dc;border-radius:24px;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:24px}.note strong{font-size:16px}.note span{font-size:12px;color:#656963}
+.contact{background:#171a19;color:#fff;border-radius:30px;padding:42px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.contact h2{font-size:42px;margin:0 0 8px;letter-spacing:-.05em}.contact p{color:#bfc4bf;font-size:13px;margin:0}.contact a{display:inline-flex;background:var(--accent);padding:16px 22px;border-radius:13px;font-weight:900}
+.footer{max-width:1440px;margin:auto;padding:25px 34px 45px;display:flex;justify-content:space-between;color:#7a7d78;font-size:11px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.58);display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.open{display:flex}.box{background:#fff;max-width:480px;width:100%;border-radius:24px;padding:28px;position:relative}.close{position:absolute;right:16px;top:13px;border:0;background:#eee;border-radius:50%;width:32px;height:32px;cursor:pointer}.box h3{font-size:25px;margin:0 35px 8px 0}.box p{color:#71756f;font-size:13px;line-height:1.6}.bigphone{font-size:27px;font-weight:900;display:block;margin:20px 0}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.hero-side{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.top{font-size:10px}.nav{height:64px;padding:0 16px}.navlinks,.phone{display:none}.menu{display:block;margin-left:auto}.hero{padding:20px 14px 25px;display:block}.hero-main{min-height:480px;padding:34px 24px;border-radius:25px}.hero-side{grid-template-columns:1fr 1fr;margin-top:12px}.stat{min-height:150px;padding:20px;border-radius:20px}.stat strong{font-size:34px}h1{font-size:48px}.section{padding:25px 14px 55px}.section h2{font-size:31px}.section-head{display:block}.section-head p{margin-top:9px}.toolbar{margin-bottom:17px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border-radius:14px}.pic{aspect-ratio:1/1}.cardbody{padding:10px}.name{font-size:12px}.desc{font-size:9px;min-height:26px}.price{font-size:11px}.ask{padding:8px 8px;font-size:9px}.tag{font-size:8px}.note{display:block;padding:18px;margin-top:16px}.note .btn{margin-top:12px}.contact{padding:27px 22px;display:block;border-radius:23px}.contact h2{font-size:31px}.contact a{margin-top:20px}.footer{padding:20px 16px 35px;display:block}.footer span{display:block;margin-top:8px}}
+</style>
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="logo" href="#"><span>ЛОГОТИП</span></a>
-    <a class="brand" href="#"><strong>БУДМАТЕРІАЛИ</strong><small>КАТАЛОГ ТОВАРІВ</small></a>
-    <nav><a href="#catalog">Каталог</a><a href="#about">Про нас</a><a href="#contact">Контакти</a></nav>
-    <a class="phone" href="tel:+380966080899"><small>Консультація</small><b>+380 96 608 08 99</b></a>
-  </div>
-</header>
+<div class="top">КАТАЛОГ БУДІВЕЛЬНИХ МАТЕРІАЛІВ · КОНСУЛЬТАЦІЯ ТА ЗАМОВЛЕННЯ ЗА ТЕЛЕФОНОМ</div>
+<header class="header"><nav class="nav">
+<a class="logo" href="#"><img src="logo/logo.png" alt="MIRBUD" onerror="this.style.display='none'"><span class="logo-mark">M</span>MIRBUD</a>
+<div class="navlinks"><a href="#catalog">Каталог</a><a href="#about">Про нас</a><a href="#contact">Контакти</a></div>
+<a class="phone" href="tel:+380966080899">+380 <b>96 608 08 99</b></a>
+<button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+</nav></header>
 
+<main>
 <section class="hero">
- <div class="container heroGrid">
-  <div class="heroCopy">
-   <div class="badge"><i></i> БУДІВЕЛЬНІ МАТЕРІАЛИ</div>
-   <h1>Все необхідне<br><span>для будівництва</span></h1>
-   <p>Переглядайте каталог товарів, обирайте потрібні матеріали та телефонуйте нам для консультації й оформлення замовлення.</p>
-   <div class="heroActions"><a class="btn primary" href="#catalog">Переглянути каталог</a><a class="btn light" href="tel:+380966080899">Зателефонувати</a></div>
-   <div class="heroFacts"><div><b>01</b><span>Великий вибір<br>матеріалів</span></div><div><b>02</b><span>Консультація<br>по телефону</span></div><div><b>03</b><span>Замовлення<br>безпосередньо</span></div></div>
-  </div>
-  <div class="heroCard">
-    <div class="heroLogo"><span>МІСЦЕ ПІД<br>ВАШ ЛОГОТИП</span></div>
-    <div class="yellowTag">BUILD<br><b>SMART</b></div>
-    <div class="heroLine"></div>
-  </div>
- </div>
+<div class="hero-main">
+<div class="kicker">Будуємо основу для сильних рішень</div>
+<h1>Матеріали,<br><span style="color:#d49b38">яким довіряють.</span></h1>
+<p>Лаконічний каталог будівельних матеріалів без зайвого інтернет-магазинного шуму. Обирайте позицію, а актуальну ціну, наявність і доставку уточнюйте телефоном.</p>
+<div class="hero-actions"><a class="btn gold" href="#catalog">Переглянути каталог</a><a class="btn light" href="tel:+380966080899">Подзвонити</a></div>
+</div>
+<div class="hero-side">
+<div class="stat"><strong>30+</strong><span>позицій у стартовому каталозі</span></div>
+<div class="stat"><strong>01</strong><span>номер для консультації та замовлення</span></div>
+</div>
 </section>
 
-<section id="catalog" class="catalog">
- <div class="container">
-  <div class="sectionHead"><div><span class="overline">КАТАЛОГ</span><h2>Наші товари</h2><p>Фото товарів без цін. Для актуальної вартості та замовлення телефонуйте.</p></div><div class="count"><b id="counter">0</b><span>товарів</span></div></div>
-  <div class="toolbar"><div class="search"><span>⌕</span><input id="search" type="search" placeholder="Знайти товар..." autocomplete="off"></div><div class="sortNote">Натисніть на фото, щоб переглянути більше</div></div>
-  <div id="grid" class="grid"></div>
- </div>
+<section class="section" id="catalog">
+<div class="section-head"><div><div class="eyebrow">Асортимент</div><h2>Каталог матеріалів</h2></div><p>На телефоні — компактна сітка по 2 товари. На ноутбуці — повноцінна сітка, щоб швидко переглядати асортимент.</p></div>
+
+<div class="grid" id="grid"></div>
+<div class="note"><div><strong>Не знаєте, що саме потрібно?</strong><br><span>Скажіть менеджеру, що будуєте — підкажемо потрібний матеріал і кількість.</span></div><a class="btn gold" href="tel:+380966080899">+380 96 608 08 99</a></div>
 </section>
 
-<section id="about" class="about"><div class="container aboutGrid"><div><span class="overline">ПРО НАС</span><h2>Матеріали,<br>яким довіряють</h2></div><div><p>Ми створили простий каталог, щоб ви могли швидко переглянути доступні матеріали без зайвої інформації.</p><p>Потрібна консультація або хочете зробити замовлення? Зателефонуйте — допоможемо зорієнтуватися.</p><a href="tel:+380966080899" class="textLink">+380 96 608 08 99 <span>→</span></a></div></div></section>
+<section class="section" id="about">
+<div class="contact" id="contact"><div><div class="eyebrow">Контакти</div><h2>Є питання по матеріалах?</h2><p>Консультація, актуальна ціна, наявність та замовлення — телефоном.</p></div><a href="tel:+380966080899">+380 96 608 08 99</a></div>
+</section>
+</main>
+<footer class="footer"><b>MIRBUD</b><span>Дяченко Мирослава Володимирівна · каталог будівельних матеріалів</span></footer>
 
-<section id="contact" class="contact"><div class="container contactBox"><div><span class="overline">ЗАМОВЛЕННЯ</span><h2>Потрібна допомога<br>з вибором?</h2></div><a href="tel:+380966080899" class="callButton"><small>Зателефонувати для консультації</small><strong>+380 96 608 08 99</strong><span>→</span></a></div></section>
+<div class="modal" id="modal"><div class="box"><button class="close" onclick="closeModal()">×</button><h3 id="modalTitle">Товар</h3><p>Для консультації щодо ціни, наявності, кількості та доставки звертайтесь за телефоном.</p><a class="bigphone" href="tel:+380966080899">+380 96 608 08 99</a><a class="btn gold" href="tel:+380966080899">Зателефонувати</a></div></div>
 
-<footer><div class="container footer"><div><strong>Дяченко Мирослава Володимирівна</strong><span>Будівельні матеріали • каталог</span></div><a href="tel:+380966080899">+380 96 608 08 99</a></div></footer>
+<script>
+const productNames = [
+"Цемент","Суха суміш","Штукатурка","Клей","Гіпсокартон","Профіль",
+"Мінеральна вата","Піна монтажна","Ґрунтовка","Фарба","Цегла","Газоблок",
+"Пісок","Щебінь","Арматура","Сітка","Кріплення","Герметик","Руберойд",
+"Покрівельні матеріали","Пиломатеріали","OSB плита","Фанера","Плитка",
+"Затирка","Ручний інструмент","Рукавички","Валики","Пензлі","Інше"
+];
 
-<div id="viewer" hidden><button id="close">×</button><button id="prev">‹</button><img id="big" alt=""><button id="next">›</button></div>
-<script src="script.js"></script>
+// Папка photos/ — ЄДИНА папка для всіх товарних фото.
+// Браузер не має права автоматично прочитати список файлів у папці,
+// тому тут передбачено 30 слотів. Фото можна називати ЯК ЗАВГОДНО,
+// а для повністю автоматичного підхоплення назв потрібен сервер.
+// Для простого хостингу цей варіант надійно працює через один список.
+const photoSlots = Array.from({length:30}, (_,i)=>`photos/${i+1}.jpg`);
+
+function esc(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+
+function render(){
+ grid.innerHTML = photoSlots.map((src,i)=>`
+ <article class="card">
+  <div class="pic"><img src="${src}" alt="${esc(productNames[i])}" loading="lazy"
+    onerror="this.src='data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#e9e5dc"/><text x="60" y="300" font-family="Arial" font-size="42" font-weight="700" fill="#555">Фото товару</text></svg>`)}'"></div>
+  <div class="cardbody">
+   <div class="tag">MIRBUD</div>
+   <div class="name">${esc(productNames[i])}</div>
+   <div class="desc">Будівельні матеріали. Актуальну наявність та ціну уточнюйте телефоном.</div>
+   <div class="cardbottom"><span class="price">Ціну уточнюйте</span><button class="ask" onclick="openModal('${esc(productNames[i])}')">Замовити</button></div>
+  </div>
+ </article>`).join("");
+}
+</script>
 </body>
 </html>
