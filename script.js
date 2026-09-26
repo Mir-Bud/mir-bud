@@ -55,11 +55,10 @@ async function loadLogos(){
  try{
   const q=await fetch(`https://api.github.com/repos/${r.o}/${r.r}/contents/logo/logo.png?ref=main`);
   if(!q.ok)return;
-  const d=await q.json();
-  const src=d.download_url;
-  document.querySelector(".logoBox").innerHTML=`<img src="${src}" alt="Логотип">`;
-  const hero=document.querySelector(".heroLogoBox");
-  if(hero) hero.innerHTML=`<img src="${src}" alt="Логотип">`;
+  const d=await q.json(),src=d.download_url;
+  const top=document.querySelector(".logoBox"),hero=document.querySelector(".heroLogoBox");
+  if(top)top.innerHTML=`<img src="${src}" alt="Логотип">`;
+  if(hero)hero.innerHTML=`<img src="${src}" alt="Логотип">`;
  }catch(e){}
 }
 loadLogos();
