@@ -1,59 +1,54 @@
 <!doctype html>
 <html lang="uk">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#111">
-<title>Матеріали — каталог</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101214">
+<title>Будівельні матеріали — каталог</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="siteHeader">
- <div class="container nav">
-  <a class="miniLogo" href="#"><span>ЛОГО</span></a>
-  <a class="wordmark" href="#"><b>МАТЕРІАЛ</b><em>CATALOG / 2026</em></a>
-  <nav><a href="#catalog">КАТАЛОГ</a><a href="#contact">КОНТАКТИ</a></nav>
-  <a class="call" href="tel:+380966080899"><span>ЗАТЕЛЕФОНУВАТИ</span><b>+380 96 608 08 99</b></a>
- </div>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#"><span>ЛОГОТИП</span></a>
+    <a class="brand" href="#"><strong>БУДМАТЕРІАЛИ</strong><small>КАТАЛОГ ТОВАРІВ</small></a>
+    <nav><a href="#catalog">Каталог</a><a href="#about">Про нас</a><a href="#contact">Контакти</a></nav>
+    <a class="phone" href="tel:+380966080899"><small>Консультація</small><b>+380 96 608 08 99</b></a>
+  </div>
 </header>
 
-<section class="intro">
- <div class="container introGrid">
-  <div class="introLeft">
-   <div class="number">01 / CATALOG</div>
-   <h1>БУДУЄМО<br><strong>ПРАВИЛЬНО.</strong></h1>
-   <p>Каталог будівельних матеріалів для ремонту, будівництва та облаштування. Обирайте товар за фото — актуальну інформацію та консультацію надамо телефоном.</p>
-   <a class="outlineBtn" href="#catalog">ПЕРЕГЛЯНУТИ КАТАЛОГ <span>↘</span></a>
+<section class="hero">
+ <div class="container heroGrid">
+  <div class="heroCopy">
+   <div class="badge"><i></i> БУДІВЕЛЬНІ МАТЕРІАЛИ</div>
+   <h1>Все необхідне<br><span>для будівництва</span></h1>
+   <p>Переглядайте каталог товарів, обирайте потрібні матеріали та телефонуйте нам для консультації й оформлення замовлення.</p>
+   <div class="heroActions"><a class="btn primary" href="#catalog">Переглянути каталог</a><a class="btn light" href="tel:+380966080899">Зателефонувати</a></div>
+   <div class="heroFacts"><div><b>01</b><span>Великий вибір<br>матеріалів</span></div><div><b>02</b><span>Консультація<br>по телефону</span></div><div><b>03</b><span>Замовлення<br>безпосередньо</span></div></div>
   </div>
-  <div class="introRight">
-   <div class="logoStage"><span>МІСЦЕ<br>ПІД<br>ЛОГОТИП</span></div>
-   <div class="sideText">BUILD<br>WITH<br>PURPOSE</div>
+  <div class="heroCard">
+    <div class="heroLogo"><span>МІСЦЕ ПІД<br>ВАШ ЛОГОТИП</span></div>
+    <div class="yellowTag">BUILD<br><b>SMART</b></div>
+    <div class="heroLine"></div>
   </div>
  </div>
 </section>
 
-<section class="marquee"><div>БУДІВНИЦТВО&nbsp;&nbsp; / &nbsp;&nbsp;РЕМОНТ&nbsp;&nbsp; / &nbsp;&nbsp;МАТЕРІАЛИ&nbsp;&nbsp; / &nbsp;&nbsp;КОНСУЛЬТАЦІЯ&nbsp;&nbsp; / &nbsp;&nbsp;</div></section>
-
-<main id="catalog" class="container catalog">
- <div class="catalogHead">
-  <div><span class="eyebrow">02 / PRODUCTS</span><h2>ОБЕРІТЬ<br>МАТЕРІАЛ</h2></div>
-  <div class="catalogInfo"><b id="counter">0</b><span>позицій<br>у каталозі</span></div>
- </div>
- <div class="searchRow">
-  <div class="search"><span>⌕</span><input id="search" placeholder="Пошук за назвою фото..." autocomplete="off"></div>
-  <span class="hint">НАТИСНІТЬ НА ФОТО ДЛЯ ПЕРЕГЛЯДУ</span>
- </div>
- <div id="grid" class="grid"></div>
-</main>
-
-<section id="contact" class="contact">
- <div class="container contactGrid">
-  <div><span class="eyebrow dark">03 / CONTACT</span><h2>Є ЗАПИТАННЯ?</h2><p>Зателефонуйте для консультації, уточнення наявності та оформлення замовлення.</p></div>
-  <a href="tel:+380966080899" class="bigCall"><small>КОНСУЛЬТАЦІЯ / ЗАМОВЛЕННЯ</small><b>+380 96 608 08 99</b><i>↗</i></a>
+<section id="catalog" class="catalog">
+ <div class="container">
+  <div class="sectionHead"><div><span class="overline">КАТАЛОГ</span><h2>Наші товари</h2><p>Фото товарів без цін. Для актуальної вартості та замовлення телефонуйте.</p></div><div class="count"><b id="counter">0</b><span>товарів</span></div></div>
+  <div class="toolbar"><div class="search"><span>⌕</span><input id="search" type="search" placeholder="Знайти товар..." autocomplete="off"></div><div class="sortNote">Натисніть на фото, щоб переглянути більше</div></div>
+  <div id="grid" class="grid"></div>
  </div>
 </section>
 
-<footer><div class="container foot"><span>Дяченко Мирослава Володимирівна</span><span>БУДІВЕЛЬНІ МАТЕРІАЛИ / КАТАЛОГ</span></div></footer>
+<section id="about" class="about"><div class="container aboutGrid"><div><span class="overline">ПРО НАС</span><h2>Матеріали,<br>яким довіряють</h2></div><div><p>Ми створили простий каталог, щоб ви могли швидко переглянути доступні матеріали без зайвої інформації.</p><p>Потрібна консультація або хочете зробити замовлення? Зателефонуйте — допоможемо зорієнтуватися.</p><a href="tel:+380966080899" class="textLink">+380 96 608 08 99 <span>→</span></a></div></div></section>
 
-<div id="viewer" hidden><button id="close">×</button><button id="prev">←</button><img id="big"><button id="next">→</button></div>
+<section id="contact" class="contact"><div class="container contactBox"><div><span class="overline">ЗАМОВЛЕННЯ</span><h2>Потрібна допомога<br>з вибором?</h2></div><a href="tel:+380966080899" class="callButton"><small>Зателефонувати для консультації</small><strong>+380 96 608 08 99</strong><span>→</span></a></div></section>
+
+<footer><div class="container footer"><div><strong>Дяченко Мирослава Володимирівна</strong><span>Будівельні матеріали • каталог</span></div><a href="tel:+380966080899">+380 96 608 08 99</a></div></footer>
+
+<div id="viewer" hidden><button id="close">×</button><button id="prev">‹</button><img id="big" alt=""><button id="next">›</button></div>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
