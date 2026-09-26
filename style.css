@@ -29,3 +29,10 @@ footer{border-top:3px solid var(--yellow);padding:30px 0;color:#999;background:#
 #viewer button{position:absolute;border:0;background:#ffffff18;color:#fff;cursor:pointer}#close{right:18px;top:10px;font-size:42px}#prev,#next{top:50%;font-size:58px;padding:3px 19px}#prev{left:12px}#next{right:12px}
 @media(max-width:900px){.heroGrid{grid-template-columns:1fr}.heroArt{display:none}.grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:650px){.wrap{width:calc(100% - 22px)}.nav{height:65px}.logoBox{width:50px;height:44px}.brand strong{font-size:10px}.brand small{font-size:7px}.phone{font-size:11px}.heroGrid{min-height:420px}.hero{padding:20px 0}.hero p{font-size:14px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.info{padding:9px}.info h3{font-size:12px}.info p{font-size:9px}.head{display:block}.head h2{font-size:29px}}
+
+/* Місця під логотипи */
+.logoBox img,.heroLogoBox img{width:100%;height:100%;object-fit:contain;display:block}
+.logoBox{overflow:hidden}
+.heroLogo{display:grid!important;place-content:center!important}
+.heroLogoBox{width:min(360px,75%);height:190px;border:3px dashed #666;background:#111;display:grid;place-items:center;color:#777;font-size:14px;font-weight:900;letter-spacing:1px}
+.heroLogoBox:hover{border-color:var(--yellow);color:var(--yellow)}
